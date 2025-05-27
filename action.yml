@@ -45,7 +45,7 @@ inputs:
 
   # Authentication settings
   anthropic_api_key:
-    description: "Anthropic API key (required for direct Anthropic API)"
+    description: "Anthropic API key (used for direct Anthropic API)"
     required: false
     default: ""
   use_bedrock:

@@ -16,11 +16,9 @@ export function validateEnvironmentVariables() {
   }
 
   if (!useBedrock && !useVertex) {
-    if (!anthropicApiKey) {
-      errors.push(
-        "ANTHROPIC_API_KEY is required when using direct Anthropic API.",
-      );
-    }
+    // When using the direct Anthropic API, the API key is optional. If not
+    // provided, execution will fail when the API call is made, but we do not
+    // enforce it here to allow other providers to set up additional handling.
   } else if (useBedrock) {
     const requiredBedrockVars = {
       AWS_REGION: process.env.AWS_REGION,
