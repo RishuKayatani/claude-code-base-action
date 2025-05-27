@@ -48,7 +48,7 @@ Add the following to your workflow file:
 | `model`             | Model to use (provider-specific format required for Bedrock/Vertex)                               | No       | 'claude-3-7-sonnet-20250219' |
 | `anthropic_model`   | DEPRECATED: Use 'model' instead                                                                   | No       | 'claude-3-7-sonnet-20250219' |
 | `timeout_minutes`   | Timeout in minutes for Claude Code execution                                                      | No       | '10'                         |
-| `anthropic_api_key` | Anthropic API key (required for direct Anthropic API)                                             | No       | ''                           |
+| `anthropic_api_key` | Anthropic API key (used for direct Anthropic API)                                                 | No       | ''                           |
 | `use_bedrock`       | Use Amazon Bedrock with OIDC authentication instead of direct Anthropic API                       | No       | 'false'                      |
 | `use_vertex`        | Use Google Vertex AI with OIDC authentication instead of direct Anthropic API                     | No       | 'false'                      |
 | `use_node_cache`    | Whether to use Node.js dependency caching (set to true only for Node.js projects with lock files) | No       | 'false'                      |

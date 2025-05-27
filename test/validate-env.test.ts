@@ -36,10 +36,8 @@ describe("validateEnvironmentVariables", () => {
       expect(() => validateEnvironmentVariables()).not.toThrow();
     });
 
-    test("should fail when ANTHROPIC_API_KEY is missing", () => {
-      expect(() => validateEnvironmentVariables()).toThrow(
-        "ANTHROPIC_API_KEY is required when using direct Anthropic API.",
-      );
+    test("should pass when ANTHROPIC_API_KEY is missing", () => {
+      expect(() => validateEnvironmentVariables()).not.toThrow();
     });
   });
 
